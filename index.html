@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tammy's Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+      let randomFacts = [
+        "I have 7 a's in my full name",
+        "I've been designing since I was 10, when I taught myself HTML/CSS and Photoshop",
+        "I've been to 9 countries",
+        "I can knit & sew"
+      ];
+      function getRandomFact() {
+        let rndFactElement = document.getElementById('random-fact');
+        let rndFct = randomFacts[Math.floor(Math.random() * 4)]
+        rndFactElement.innerText = rndFct
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Hi👋! Welcome to my page</h1>
+    <p>Click the button for a random fact about me</p>
+    <button onclick="getRandomFact()">Click me!</button>
+    <h3 id="random-fact"></h3>
+  </body>
+</html>
